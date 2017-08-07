@@ -1,13 +1,10 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import tempLate from "./"
+import prepend from "./"
 
 test(({same, end}) => {
-  same(
-    tempLate(true),
-    false
-  )
+  same(prepend("a")(["b"]), ["a", "b"])
 
   end()
 })
