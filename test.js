@@ -1,28 +1,28 @@
 /* eslint-disable flowtype/require-return-type */
-import {test} from "tap"
+import {test} from "tap";
 
-import prepend from "./index"
+import prepend from "./index";
 
 test(({same, end}) => {
   same(
     prepend("a")(["b"]),
     ["a", "b"]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     prepend("a")("bc"),
     "abc"
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({throws, end}) => {
-  throws(() => prepend("c")({}))
+  throws(() => prepend("c")({}));
 
-  end()
-})
+  end();
+});
