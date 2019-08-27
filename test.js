@@ -1,7 +1,7 @@
-/* eslint-disable flowtype/require-return-type */
+
 import {test} from "tap";
 
-import prepend from "./index";
+import prepend from "./";
 
 test(({same, end}) => {
   same(
