@@ -1,20 +1,18 @@
-/* eslint-disable no-extra-parens, no-unused-expressions */
 import type from "@unction/type";
-export default function prepend (value) {
-  return function prependLeft (orderedList) {
+import {OrderedEnumerableType} from "./types";
+
+export default function prepend<A, B> (value: A) {
+  return function prependLeft (orderedList: OrderedEnumerableType<A | B>): OrderedEnumerableType<A | B> {
     switch (type(orderedList)) {
-      case "String":
-      {
+      case "String": {
         return `${value}${orderedList}`;
       }
 
-      case "Array":
-      {
+      case "Array": {
         return [value, ...orderedList];
       }
 
-      default:
-      {
+      default: {
         throw new Error(`prepend doesn't know how to deal with ${type(orderedList)}`);
       }
     }
