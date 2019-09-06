@@ -1,14 +1,14 @@
 
 import prepend from "./index";
 
-test(() => {
+test("works", () => {
   expect(prepend("a")(["b"])).toEqual(["a", "b"]);
 });
 
-test(() => {
+test("works", () => {
   expect(prepend("a")("bc")).toEqual("abc");
 });
 
-test(() => {
+test("works", () => {
   expect(() => prepend("c")({})).toThrow();
 });
