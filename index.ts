@@ -1,5 +1,4 @@
 import type from "@unction/type";
-import {OrderedEnumerableType} from "./types";
 
 export default function prepend<A, B> (value: A) {
   return function prependLeft (orderedList: OrderedEnumerableType<A | B>): OrderedEnumerableType<A | B> {
