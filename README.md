@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> A => OrderedEnumerableType<A | B> => OrderedEnumerableType<A | B>
+> A => Array<A | B> | string => Array<A | B> | string
 
 Takes a value and puts it at the beginning of the given list.
 

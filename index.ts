@@ -1,7 +1,7 @@
 import type from "@unction/type";
 
 export default function prepend<A, B> (value: A) {
-  return function prependLeft (orderedList: OrderedEnumerableType<A | B>): OrderedEnumerableType<A | B> {
+  return function prependLeft (orderedList: Array<A | B> | string): Array<A | B> | string {
     switch (type(orderedList)) {
       case "String": {
         return `${value}${orderedList}`;
